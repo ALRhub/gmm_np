@@ -11,7 +11,7 @@ The authors
 ## Installation
 Please clone this repository and run
 
-```pip install -e .```
+```pip install .```
 
 to install all necessary packages.
 
