@@ -1,0 +1,23 @@
+defaults:
+  - base/evaluation@_here_
+  - base/plotting@_here_
+  - _self_
+  
+experiment_name: Sinusoid1D_64_16
+
+### data ###
+benchmark_meta: Sinusoid1D 
+benchmark_test: Sinusoid1D 
+d_x: 1
+d_y: 1
+data_noise_std: 0.25
+seed_data: 1234
+# meta data
+n_tasks_meta: 64
+n_datapoints_per_task_meta_train: 16
+n_datapoints_per_task_meta_test: 64
+min_context_size_meta_train: 0
+max_context_size_meta_train: ${experiment.n_datapoints_per_task_meta_train}
+# test data
+n_tasks_test: 256
+n_datapoints_per_task_test: 64

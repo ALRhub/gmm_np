@@ -1,0 +1,51 @@
+### seed ###
+seed: 3234
+
+### architecture ###
+d_z: 2
+gmm_diagonal_cov: False
+gmm_prior_n_components: 3
+gmm_posterior_n_components: ${model.gmm_prior_n_components}
+gmm_prior_scale: 1.0
+n_samples_posterior_init: ${cond:${model.model_learner_learn_prior},128,null}
+decoder_n_hidden: 2
+decoder_d_hidden: 16
+decoder_activation: "tanh"
+decoder_output_scale_features: "fixed"
+decoder_output_scale: ${max:${experiment.data_noise_std},${model.std_y_min}}
+decoder_output_scale_min: null
+
+### training ###
+n_epochs_meta_train: ${cond:${do_smoke_test},2,1000}
+n_epochs_adapt: ${cond:${do_smoke_test},2,1000}
+n_subtasks_meta: ${cond:${do_smoke_test},${max:${mul:${experiment.n_tasks_meta},2},256},2048}
+n_context_sets_per_task_meta: ${int_div:${model.n_subtasks_meta},${experiment.n_tasks_meta}}
+batch_size: ${min:${model.n_subtasks_meta},256} 
+min_context_size_meta: ${max:${experiment.min_context_size_meta_train},1}
+max_context_size_meta: ${experiment.max_context_size_meta_train}
+
+### model learner ###
+model_learner_lr: 0.01
+model_learner_n_samples: 32
+model_learner_learn_prior: False
+
+### GMM learner ###
+gmm_learner_n_samples: 128
+gmm_learner_n_samples_per_comp: ${int_div:${model.gmm_learner_n_samples},${model.gmm_posterior_n_components}}
+gmm_learner_component_kl_bound: 0.01
+gmm_learner_global_upper_bound: 1e5
+gmm_learner_dual_conv_tol: 0.001
+gmm_learner_use_warm_starts: False
+
+### tqdm ###
+show_tqdm_for_minibatches: False
+
+### context sizes may be empty ###
+allows_empty_context_set: True 
+
+### saving/loading ###
+do_save_and_load_for_meta_training: False
+checkpoint_path: null
+
+### lower bound for output std dev ###
+std_y_min: 0.1

@@ -1,0 +1,18 @@
+defaults:
+  - base/gmm_np@_here_
+  - _self_
+
+######################################
+#  Set parameters determined by HPO  #
+######################################
+
+### architecture ###
+d_z: 3
+gmm_prior_n_components: 7
+decoder_d_hidden: 8 
+
+### model learner ###
+model_learner_lr: 0.0018740597547322096
+
+### GMM learner ###
+gmm_learner_component_kl_bound: 0.0010378864321132046

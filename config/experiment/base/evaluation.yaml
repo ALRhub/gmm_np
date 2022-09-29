@@ -1,0 +1,7 @@
+### evaluation ###
+metrics_reduce_mode: median
+n_samples_eval: ${cond:${do_smoke_test},16,1024}
+batch_size_eval: 8
+context_sizes_eval: ${cond:${do_smoke_test},[0, 1, 2, 6],[0, 1, 2, 4, 6, 8, 12, 16]}
+context_size_proposal_meta_test: ${experiment.n_datapoints_per_task_meta_test}
+context_size_proposal_test: ${experiment.n_datapoints_per_task_test}

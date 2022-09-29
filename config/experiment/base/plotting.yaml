@@ -1,0 +1,7 @@
+### plotting ###
+do_debug_plots: True
+n_samples_plot: 64
+plot_std_y: True
+task_ids_plot: [0, 1, 2, 3]
+context_sizes_plot: [0, 1, 2, 6]
+save_plots_as_tikz: False
