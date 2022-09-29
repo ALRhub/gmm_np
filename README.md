@@ -1,7 +1,7 @@
-# Source Code for GMM-NP (ICLR2023)
+# Source Code for GMM-NP (ICLR 2023)
 Dear reviewers, 
 
-this is the source code accompanying the ICLR2023 submission
+this is the source code accompanying the ICLR 2023 submission
 "Accurate Bayesian Meta-Learning by Accurate Task Posterior Inference"!
 
 Thanks a lot for your effort!
