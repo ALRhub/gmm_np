@@ -13,7 +13,7 @@ Please clone this repository and run
 
 ```pip install .```
 
-to install all necessary packages.
+from the source directory to install all necessary packages. We recommend to create a new conda environment (python >= 3.10) for this purpose.
 
 ## Run
 We provide a jupyter notebook 
