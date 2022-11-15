@@ -7,8 +7,8 @@ defaults:
 ######################################
 
 ### architecture ###
-d_z: 8
-gmm_prior_n_components: 7
+d_z: 4
+gmm_prior_n_components: 4
 decoder_d_hidden: 44
 
 ### model learner ###
