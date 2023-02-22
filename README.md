@@ -2,7 +2,7 @@
 This is the source code accompanying [Volpp et al., "Accurate Bayesian Meta-Learning by Accurate Task Posterior Inference", ICLR 2023](https://openreview.net/forum?id=sb-IkS8DQw2).
 
 ## Installation
-Please clone this repository and run
+Clone this repository and run
 
 ```python3 -m pip install .```
 
