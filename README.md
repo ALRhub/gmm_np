@@ -7,7 +7,7 @@ Clone this repository and run
 ```python3 -m pip install .```
 
 from the source directory to install all necessary packages.
-It is recommended to create a new virtual environment (``python >= 3.10``) for this purpose.
+It is recommended to create a new virtual environment (``python ~= 3.10``) for this purpose.
 
 ## Run
 We provide a jupyter notebook 
